@@ -1,0 +1,7 @@
+{
+  "tool": "summarize_text",
+  "args": {
+    "text": "MCP를 도입하면 도구 호출의 입출력과 오류가 표준화되어, 검증과 운영이 쉬워진다.",
+    "max_chars": 40
+  }
+}

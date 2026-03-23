@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-01-02T15:52:53.032121",
+  "total_events": 11,
+  "events": [
+    {
+      "id": "820b68c2",
+      "timestamp": "2026-01-02T15:52:53.014706",
+      "event_type": "risk_classification",
+      "request_id": "db914972",
+      "action_type": "read",
+      "risk_level": "low",
+      "requires_approval": false
+    },
+    {
+      "id": "0b2229be",
+      "timestamp": "2026-01-02T15:52:53.015106",
+      "event_type": "action_executed",
+      "request_id": "db914972",
+      "action_type": "read",
+      "target": "users_table",
+      "result": "[users_table] 조회 완료: 3개의 레코드 반환",
+      "approved_by": ""
+    },
+    {
+      "id": "0d2d08ec",
+      "timestamp": "2026-01-02T15:52:53.020753",
+      "event_type": "risk_classification",
+      "request_id": "c757d4bf",
+      "action_type": "modify",
+      "risk_level": "medium",
+      "requires_approval": true
+    },
+    {
+      "id": "2a84c852",
+      "timestamp": "2026-01-02T15:52:53.021011",
+      "event_type": "approval_request",
+      "request_id": "c757d4bf",
+      "action_type": "modify",
+      "risk_level": "medium",
+      "approver": "auto_reviewer",
+      "decision": "approved",
+      "reason": "중위험 작업 자동 승인"
+    },
+    {
+      "id": "77e5074c",
+      "timestamp": "2026-01-02T15:52:53.021237",
+      "event_type": "action_executed",
+      "request_id": "c757d4bf",
+      "action_type": "modify",
+      "target": "config_settings",
+      "result": "[config_settings] 수정 완료: 1개의 레코드 업데이트",
+      "approved_by": "auto_reviewer"
+    },
+    {
+      "id": "3a437915",
+      "timestamp": "2026-01-02T15:52:53.026088",
+      "event_type": "risk_classification",
+      "request_id": "63eef59c",
+      "action_type": "delete",
+      "risk_level": "high",
+      "requires_approval": true
+    },
+    {
+      "id": "56fce41d",
+      "timestamp": "2026-01-02T15:52:53.026345",
+      "event_type": "approval_request",
+      "request_id": "63eef59c",
+      "action_type": "delete",
+      "risk_level": "high",
+      "approver": "security_admin",
+      "decision": "rejected",
+      "reason": "삭제 작업은 추가 검토 필요"
+    },
+    {
+      "id": "1bd129aa",
+      "timestamp": "2026-01-02T15:52:53.026571",
+      "event_type": "action_blocked",
+      "request_id": "63eef59c",
+      "action_type": "delete",
+      "reason": "삭제 작업은 추가 검토 필요"
+    },
+    {
+      "id": "33bee311",
+      "timestamp": "2026-01-02T15:52:53.031130",
+      "event_type": "risk_classification",
+      "request_id": "b6da102f",
+      "action_type": "send",
+      "risk_level": "high",
+      "requires_approval": true
+    },
+    {
+      "id": "bfd46c39",
+      "timestamp": "2026-01-02T15:52:53.031342",
+      "event_type": "approval_request",
+      "request_id": "b6da102f",
+      "action_type": "send",
+      "risk_level": "high",
+      "approver": "senior_admin",
+      "decision": "approved",
+      "reason": "고위험 작업 승인됨"
+    },
+    {
+      "id": "20771584",
+      "timestamp": "2026-01-02T15:52:53.031541",
+      "event_type": "action_executed",
+      "request_id": "b6da102f",
+      "action_type": "send",
+      "target": "external_api",
+      "result": "[external_api] 전송 완료: 외부 시스템에 데이터 전송",
+      "approved_by": "senior_admin"
+    }
+  ]
+}

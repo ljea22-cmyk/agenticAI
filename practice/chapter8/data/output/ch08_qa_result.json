@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "question": "asyncio.gather()와 asyncio.wait()의 차이점은 무엇인가요?",
+      "answer": "asyncio.gather()와 asyncio.wait()의 주요 차이점은 다음과 같습니다:\n\n1. **결과 반환**: asyncio.gather()는 모든 코루틴이 완료될 때까지 기다린 후 결과를 리스트 형태로 반환합니다. 반면, asyncio.wait()는 완료된 태스크와 대기 중인 태스크를 구분하여 반환합니다.\n\n2. **순서 보장**: asyncio.gather()는 입력 코루틴의 순서와 동일한 순서로 결과 리스트를 반환하지만, asyncio.wait()는 결과의 순서를 보장하지 않습니다.\n\n3. **제어 수준**: asyncio.wait()는 더 세밀한 제어를 제공하여, 특정 태스크가 완료될 때까지 기다리거나, 타임아웃을 설정하는 등의 기능을 사용할 수 있습니다.\n\n이러한 차이점으로 인해 상황에 따라 적절한 함수를 선택하여 사용할 수 있습니다.\n\n[출처 1: asyncio_tasks.txt]",
+      "sources": [
+        {
+          "source": "asyncio_tasks.txt",
+          "chunk_id": 8
+        },
+        {
+          "source": "asyncio_basics.txt",
+          "chunk_id": 0
+        },
+        {
+          "source": "asyncio_tasks.txt",
+          "chunk_id": 7
+        }
+      ],
+      "elapsed_seconds": 6.32
+    },
+    {
+      "question": "비동기 함수에서 블로킹 코드를 피하려면 어떻게 해야 하나요?",
+      "answer": "비동기 함수 내에서 블로킹 코드를 피하려면, `time.sleep()` 대신 `asyncio.sleep()`을 사용해야 합니다. `asyncio.sleep()`은 이벤트 루프를 차단하지 않고 다른 태스크가 실행될 수 있도록 합니다.\n\n예를 들어, 잘못된 예는 다음과 같습니다:\n\n```python\nasync def bad_sleep():\n    time.sleep(1)  # 이벤트 루프 차단!\n```\n\n올바른 예는 다음과 같습니다:\n\n```python\nasync def good_sleep():\n    await asyncio.sleep(1)  # 다른 태스크 실행 가능\n```\n\n또한, CPU 바운드 작업은 `asyncio.to_thread()` 또는 `ProcessPoolExecutor`를 사용하여 별도의 스레드나 프로세스에서 실행해야 합니다. \n\n[출처 1: asyncio_best_practices.txt]",
+      "sources": [
+        {
+          "source": "asyncio_best_practices.txt",
+          "chunk_id": 2
+        },
+        {
+          "source": "asyncio_basics.txt",
+          "chunk_id": 0
+        },
+        {
+          "source": "asyncio_best_practices.txt",
+          "chunk_id": 6
+        }
+      ],
+      "elapsed_seconds": 5.12
+    },
+    {
+      "question": "코루틴이란 무엇이고 어떻게 정의하나요?",
+      "answer": "코루틴은 async def로 정의되는 함수입니다. 일반 함수와 달리 실행을 일시 중지하고 재개할 수 있으며, await 키워드를 사용하여 다른 코루틴의 완료를 기다릴 수 있습니다. 예를 들어, 다음과 같이 정의할 수 있습니다:\n\n```python\nasync def hello():\n    print(\"Hello\")\n    await asyncio.sleep(1)\n    print(\"World\")\n```\n\n[출처 1: asyncio_basics.txt, 청크 0]",
+      "sources": [
+        {
+          "source": "asyncio_basics.txt",
+          "chunk_id": 0
+        },
+        {
+          "source": "asyncio_basics.txt",
+          "chunk_id": 1
+        },
+        {
+          "source": "asyncio_best_practices.txt",
+          "chunk_id": 2
+        }
+      ],
+      "elapsed_seconds": 4.54
+    }
+  ],
+  "index_stats": {
+    "total_documents": 3,
+    "total_chunks": 11,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "embedding_model": "text-embedding-ada-002"
+  },
+  "executed_at": "2026-01-02T14:22:37.775391",
+  "total_elapsed_seconds": 22.43,
+  "success": true
+}

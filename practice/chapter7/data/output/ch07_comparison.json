@@ -1,0 +1,22 @@
+{
+  "topic": "Python 비동기 프로그래밍 (asyncio)",
+  "single_agent": {
+    "api_calls": 1,
+    "elapsed_seconds": 14.76,
+    "document_length": 2083,
+    "success": true
+  },
+  "multi_agent": {
+    "api_calls": 3,
+    "revision_count": 1,
+    "elapsed_seconds": 33.31,
+    "document_length": 2146,
+    "success": true
+  },
+  "comparison": {
+    "api_calls_ratio": 3.0,
+    "time_ratio": 2.26,
+    "length_difference": 63
+  },
+  "analysis": "멀티에이전트는 단일 에이전트 대비 API를 3.0배 호출했다. 실행 시간은 2.26배 소요되었다. 멀티에이전트가 63자 더 긴 문서를 생성했다."
+}

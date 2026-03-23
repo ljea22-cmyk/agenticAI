@@ -1,0 +1,2 @@
+[2026-01-02T13:38:10.332764] workflow_start: {"topic": "인공지능이 소프트웨어 개발에 미치는 영향"}
+[2026-01-02T13:38:18.748480] workflow_end: {"revision_count": 0, "is_valid": true, "has_error": false}

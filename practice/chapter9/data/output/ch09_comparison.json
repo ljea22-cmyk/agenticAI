@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "vector_rag": {
+      "total_time": 21.72,
+      "chunk_count": 11
+    },
+    "graph_rag": {
+      "total_time": 59.0,
+      "entity_count": 41,
+      "relation_count": 44
+    }
+  },
+  "questions": [
+    {
+      "query": "asyncio.gather()와 asyncio.wait()의 관계는 무엇인가요?",
+      "vector_time": 6.32,
+      "graph_time": 6.61,
+      "graph_entities": [
+        "asyncio.wait",
+        "asyncio.create_task",
+        "완료된 태스크",
+        "대기 중인 태스크"
+      ]
+    },
+    {
+      "query": "코루틴과 태스크는 어떤 관계가 있나요?",
+      "vector_time": 7.82,
+      "graph_time": 7.33,
+      "graph_entities": [
+        "코루틴",
+        "asyncio.create_task",
+        "비동기 작업",
+        "완료된 태스크",
+        "대기 중인 태스크"
+      ]
+    },
+    {
+      "query": "비동기 프로그래밍에서 이벤트 루프의 역할은 무엇인가요?",
+      "vector_time": 4.05,
+      "graph_time": 3.58,
+      "graph_entities": [
+        "이벤트 루프",
+        "코루틴",
+        "비동기 작업",
+        "asyncio",
+        "async def"
+      ]
+    }
+  ],
+  "analysis": "그래프 RAG는 벡터 RAG 대비 2.72배의 시간이 소요되었다. 그래프 RAG는 41개의 엔티티와 44개의 관계를 추출했다. 그래프 RAG는 엔티티 간 관계를 명시적으로 활용하여 관계 기반 질문에 더 정확한 답변을 제공한다."
+}

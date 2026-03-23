@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-01-01T21:39:39.776549+00:00",
+  "tool": {
+    "name": "summarize_text",
+    "description": "텍스트를 지정한 길이로 요약합니다(설계 연습용 예시).",
+    "input_schema": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 20,
+          "maximum": 500,
+          "default": 120
+        }
+      },
+      "additionalProperties": false
+    },
+    "output_schema": {
+      "type": "object",
+      "required": [
+        "ok"
+      ],
+      "properties": {
+        "ok": {
+          "type": "boolean"
+        },
+        "result": {
+          "type": "object"
+        },
+        "error": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "errors": [
+      {
+        "code": "INVALID_ARGUMENT",
+        "message": "입력 형식이 올바르지 않습니다."
+      },
+      {
+        "code": "TOO_LARGE",
+        "message": "입력이 허용 범위를 초과했습니다."
+      }
+    ],
+    "constraints": {
+      "max_input_chars": 2000,
+      "idempotent": true,
+      "side_effects": "none"
+    }
+  }
+}

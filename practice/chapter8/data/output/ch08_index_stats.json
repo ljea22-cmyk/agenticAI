@@ -1,0 +1,7 @@
+{
+  "total_documents": 3,
+  "total_chunks": 11,
+  "chunk_size": 500,
+  "chunk_overlap": 50,
+  "embedding_model": "text-embedding-ada-002"
+}

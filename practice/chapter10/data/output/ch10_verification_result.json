@@ -1,0 +1,51 @@
+{
+  "executed_at": "2026-01-02T15:34:31.206103",
+  "config": {
+    "max_retries": 3,
+    "consistency_threshold": 0.25,
+    "grounding_threshold": 0.7
+  },
+  "summary": {
+    "total_questions": 3,
+    "passed": 3,
+    "failed": 0,
+    "avg_consistency_score": 0.294,
+    "avg_grounding_score": 1.0,
+    "total_retries": 0
+  },
+  "results": [
+    {
+      "query": "asyncio에서 이벤트 루프의 역할은 무엇인가요?",
+      "final_answer": "이벤트 루프는 비동기 작업을 관리하고 스케줄링하는 핵심 구성 요소입니다. asyncio.run() 함수를 사용하면 이벤트 루프를 자동으로 생성하고 관리할 수 있습니다. 이를 통해 비동기 함수가 효율적으로 실행될 수 있도록 지원합니다.",
+      "verification_passed": true,
+      "retry_count": 0,
+      "consistency_score": 0.293,
+      "grounding_score": 1.0,
+      "human_decision": "",
+      "failure_reasons": [],
+      "elapsed_seconds": 11.63
+    },
+    {
+      "query": "코루틴과 태스크의 차이점은 무엇인가요?",
+      "final_answer": "코루틴과 태스크의 차이점은 다음과 같습니다:\n\n1. **정의 및 실행**:\n   - **코루틴**: `async def`로 정의된 함수로, 실행을 일시 중지하고 재개할 수 있는 특성을 가지고 있습니다. 코루틴을 호출하면 코루틴 객체가 반환되며, 실제 실행을 위해서는 이벤트 루프에서 실행해야 합니다.\n   - **태스크**: 코루틴을 감싸서 이벤트 루프에서 실행되도록 예약하는 객체입니다. `asyncio.create_task()` 함수를 사용하여 태스크를 생성하면 코루틴이 즉시 스케줄링됩니다.\n\n2. **상태 관리**:\n   - **코루틴**: 코루틴은 실행 중에 `await` 키워드를 사용하여 다른 코루틴의 완료를 기다릴 수 있습니다. 하지만 코루틴 자체는 실행되지 않으면 아무 작업도 수행하지 않습니다.\n   - **태스크**: 태스크는 코루틴의 실행을 관리하며, 태스크가 완료될 때까지 기다릴 수 있습니다. 태스크는 이벤트 루프에 의해 스케줄링되어 실행됩니다.\n\n따라서, 코루틴은 비동기 작업을 정의하는 함수이고, 태스크는 그 코루틴을 실행하기 위해 이벤트 루프에 등록하는 객체입니다.",
+      "verification_passed": true,
+      "retry_count": 0,
+      "consistency_score": 0.295,
+      "grounding_score": 1.0,
+      "human_decision": "",
+      "failure_reasons": [],
+      "elapsed_seconds": 17.08
+    },
+    {
+      "query": "asyncio.gather()와 asyncio.wait()는 어떻게 다른가요?",
+      "final_answer": "`asyncio.gather()`와 `asyncio.wait()`는 비동기 코루틴을 실행하는 데 사용되지만, 그 동작 방식과 반환하는 결과가 다릅니다.\n\n1. **결과 반환 방식**:\n   - `asyncio.gather()`는 모든 코루틴이 완료될 때까지 기다리고, 결과를 리스트 형태로 반환합니다. 이때 결과의 순서는 입력 코루틴의 순서와 동일합니다.\n   - 반면, `asyncio.wait()`는 완료된 태스크와 대기 중인 태스크를 구분하여 반환합니다. 즉, 완료된 태스크와 아직 실행 중인 태스크를 별도로 처리할 수 있습니다.\n\n2. **예외 처리**:\n   - `asyncio.gather()`는 `return_exceptions=True` 옵션을 사용하면 개별 태스크에서 발생한 예외를 리스트에 포함시켜 반환합니다. 이를 통해 예외가 다른 태스크에 영향을 주지 않도록 격리할 수 있습니다.\n   - `asyncio.wait()`는 예외 처리를 위한 특별한 옵션이 없으며, 완료된 태스크의 상태를 확인하여 예외를 처리해야 합니다.\n\n따라서, `asyncio.gather()`는 결과를 리스트로 받고 순서를 보장하는 반면, `asyncio.wait()`는 더 세밀한 제어를 제공하지만 결과를 리스트 형태로 반환하지 않습니다.",
+      "verification_passed": true,
+      "retry_count": 0,
+      "consistency_score": 0.293,
+      "grounding_score": 1.0,
+      "human_decision": "",
+      "failure_reasons": [],
+      "elapsed_seconds": 16.74
+    }
+  ]
+}

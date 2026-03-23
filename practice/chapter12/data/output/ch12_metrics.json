@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-01-02T17:08:30.118485",
+  "summary": {
+    "total_requests": 3,
+    "successful_requests": 3,
+    "success_rate": 100.0,
+    "total_input_tokens": 51,
+    "total_output_tokens": 974,
+    "total_tokens": 1025,
+    "total_cost_usd": 0.002368,
+    "avg_latency_ms": 8201.7,
+    "avg_cost_per_request_usd": 0.000789
+  },
+  "requests": [
+    {
+      "request_id": "req_001",
+      "model": "gpt-4o-mini",
+      "input_tokens": 17,
+      "output_tokens": 458,
+      "latency_ms": 10985.76,
+      "cost_usd": 0.001109,
+      "success": true,
+      "timestamp": "2026-01-02T17:08:16.497852"
+    },
+    {
+      "request_id": "req_002",
+      "model": "gpt-4o-mini",
+      "input_tokens": 16,
+      "output_tokens": 36,
+      "latency_ms": 1845.02,
+      "cost_usd": 9.6e-05,
+      "success": true,
+      "timestamp": "2026-01-02T17:08:18.343109"
+    },
+    {
+      "request_id": "req_003",
+      "model": "gpt-4o-mini",
+      "input_tokens": 18,
+      "output_tokens": 480,
+      "latency_ms": 11774.32,
+      "cost_usd": 0.001163,
+      "success": true,
+      "timestamp": "2026-01-02T17:08:30.118385"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "executed_at": "2026-01-02T15:52:53.031660",
+  "summary": {
+    "total_requests": 4,
+    "executed": 3,
+    "blocked": 1,
+    "by_risk_level": {
+      "low": 1,
+      "medium": 1,
+      "high": 2
+    }
+  },
+  "results": [
+    {
+      "request_id": "db914972",
+      "action_type": "read",
+      "target": "users_table",
+      "risk_level": "low",
+      "required_approval": false,
+      "approval_status": "pending",
+      "approver": "",
+      "execution_status": "executed",
+      "execution_result": "[users_table] 조회 완료: 3개의 레코드 반환",
+      "elapsed_seconds": 0.002
+    },
+    {
+      "request_id": "c757d4bf",
+      "action_type": "modify",
+      "target": "config_settings",
+      "risk_level": "medium",
+      "required_approval": true,
+      "approval_status": "approved",
+      "approver": "auto_reviewer",
+      "execution_status": "executed",
+      "execution_result": "[config_settings] 수정 완료: 1개의 레코드 업데이트",
+      "elapsed_seconds": 0.001
+    },
+    {
+      "request_id": "63eef59c",
+      "action_type": "delete",
+      "target": "user_data",
+      "risk_level": "high",
+      "required_approval": true,
+      "approval_status": "rejected",
+      "approver": "security_admin",
+      "execution_status": "blocked",
+      "execution_result": "작업이 차단되었습니다: 삭제 작업은 추가 검토 필요",
+      "elapsed_seconds": 0.001
+    },
+    {
+      "request_id": "b6da102f",
+      "action_type": "send",
+      "target": "external_api",
+      "risk_level": "high",
+      "required_approval": true,
+      "approval_status": "approved",
+      "approver": "senior_admin",
+      "execution_status": "executed",
+      "execution_result": "[external_api] 전송 완료: 외부 시스템에 데이터 전송",
+      "elapsed_seconds": 0.001
+    }
+  ]
+}

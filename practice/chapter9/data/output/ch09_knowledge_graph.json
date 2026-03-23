@@ -1,0 +1,520 @@
+{
+  "entities": [
+    {
+      "name": "비동기 프로그래밍",
+      "type": "개념"
+    },
+    {
+      "name": "asyncio",
+      "type": "모듈"
+    },
+    {
+      "name": "코루틴",
+      "type": "개념"
+    },
+    {
+      "name": "이벤트 루프",
+      "type": "개념"
+    },
+    {
+      "name": "async def",
+      "type": "키워드"
+    },
+    {
+      "name": "await",
+      "type": "키워드"
+    },
+    {
+      "name": "asyncio.run()",
+      "type": "함수"
+    },
+    {
+      "name": "hello()",
+      "type": "함수"
+    },
+    {
+      "name": "main()",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.sleep()",
+      "type": "함수"
+    },
+    {
+      "name": "time.sleep",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.sleep",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.to_thread",
+      "type": "함수"
+    },
+    {
+      "name": "ProcessPoolExecutor",
+      "type": "모듈"
+    },
+    {
+      "name": "asyncio.Semaphore",
+      "type": "모듈"
+    },
+    {
+      "name": "fetch_data",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.gather",
+      "type": "함수"
+    },
+    {
+      "name": "task1",
+      "type": "함수"
+    },
+    {
+      "name": "task2",
+      "type": "함수"
+    },
+    {
+      "name": "task3",
+      "type": "함수"
+    },
+    {
+      "name": "results",
+      "type": "변수"
+    },
+    {
+      "name": "Exception",
+      "type": "개념"
+    },
+    {
+      "name": "fetch_with_cleanup",
+      "type": "함수"
+    },
+    {
+      "name": "aiohttp",
+      "type": "모듈"
+    },
+    {
+      "name": "aiofiles",
+      "type": "모듈"
+    },
+    {
+      "name": "main",
+      "type": "함수"
+    },
+    {
+      "name": "PYTHONASYNCIODEBUG",
+      "type": "키워드"
+    },
+    {
+      "name": "asyncio.create_task",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.wait",
+      "type": "함수"
+    },
+    {
+      "name": "task",
+      "type": "개념"
+    },
+    {
+      "name": "result",
+      "type": "개념"
+    },
+    {
+      "name": "url",
+      "type": "키워드"
+    },
+    {
+      "name": "url1",
+      "type": "키워드"
+    },
+    {
+      "name": "url2",
+      "type": "키워드"
+    },
+    {
+      "name": "url3",
+      "type": "키워드"
+    },
+    {
+      "name": "asyncio.wait()",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.create_task()",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.FIRST_COMPLETED",
+      "type": "개념"
+    },
+    {
+      "name": "asyncio.wait_for()",
+      "type": "함수"
+    },
+    {
+      "name": "asyncio.TimeoutError",
+      "type": "개념"
+    },
+    {
+      "name": "slow_operation()",
+      "type": "함수"
+    }
+  ],
+  "relations": [
+    {
+      "source": "비동기 프로그래밍",
+      "relation": "포함한다",
+      "target": "asyncio"
+    },
+    {
+      "source": "asyncio",
+      "relation": "사용한다",
+      "target": "코루틴"
+    },
+    {
+      "source": "코루틴",
+      "relation": "정의된다",
+      "target": "async def"
+    },
+    {
+      "source": "코루틴",
+      "relation": "호출한다",
+      "target": "hello()"
+    },
+    {
+      "source": "hello()",
+      "relation": "호출한다",
+      "target": "asyncio.sleep()"
+    },
+    {
+      "source": "코루틴",
+      "relation": "사용한다",
+      "target": "await"
+    },
+    {
+      "source": "이벤트 루프",
+      "relation": "관리한다",
+      "target": "비동기 작업"
+    },
+    {
+      "source": "asyncio.run()",
+      "relation": "생성하고 관리한다",
+      "target": "이벤트 루프"
+    },
+    {
+      "source": "main()",
+      "relation": "호출한다",
+      "target": "hello()"
+    },
+    {
+      "source": "asyncio.run()",
+      "relation": "호출한다",
+      "target": "main()"
+    },
+    {
+      "source": "bad_sleep",
+      "relation": "호출한다",
+      "target": "time.sleep"
+    },
+    {
+      "source": "good_sleep",
+      "relation": "호출한다",
+      "target": "asyncio.sleep"
+    },
+    {
+      "source": "limited_fetch",
+      "relation": "사용한다",
+      "target": "asyncio.Semaphore"
+    },
+    {
+      "source": "limited_fetch",
+      "relation": "호출한다",
+      "target": "fetch_data"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "사용한다",
+      "target": "task1"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "사용한다",
+      "target": "task2"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "사용한다",
+      "target": "task3"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "사용한다",
+      "target": "return_exceptions"
+    },
+    {
+      "source": "results",
+      "relation": "포함한다",
+      "target": "Exception"
+    },
+    {
+      "source": "fetch_with_cleanup",
+      "relation": "호출한다",
+      "target": "aiohttp"
+    },
+    {
+      "source": "fetch_with_cleanup",
+      "relation": "호출한다",
+      "target": "aiofiles"
+    },
+    {
+      "source": "asyncio.get_running_loop",
+      "relation": "호출한다",
+      "target": "loop"
+    },
+    {
+      "source": "loop",
+      "relation": "호출한다",
+      "target": "main"
+    },
+    {
+      "source": "loop",
+      "relation": "설정한다",
+      "target": "set_debug"
+    },
+    {
+      "source": "PYTHONASYNCIODEBUG",
+      "relation": "설정한다",
+      "target": "디버그 모드"
+    },
+    {
+      "source": "asyncio.create_task",
+      "relation": "사용한다",
+      "target": "fetch_data"
+    },
+    {
+      "source": "main",
+      "relation": "호출한다",
+      "target": "asyncio.create_task"
+    },
+    {
+      "source": "main",
+      "relation": "호출한다",
+      "target": "asyncio.gather"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "사용한다",
+      "target": "fetch_data"
+    },
+    {
+      "source": "asyncio.gather",
+      "relation": "반환한다",
+      "target": "results"
+    },
+    {
+      "source": "main",
+      "relation": "호출한다",
+      "target": "asyncio.wait"
+    },
+    {
+      "source": "task",
+      "relation": "반환한다",
+      "target": "result"
+    },
+    {
+      "source": "result",
+      "relation": "포함한다",
+      "target": "url"
+    },
+    {
+      "source": "results",
+      "relation": "포함한다",
+      "target": "url1"
+    },
+    {
+      "source": "results",
+      "relation": "포함한다",
+      "target": "url2"
+    },
+    {
+      "source": "results",
+      "relation": "포함한다",
+      "target": "url3"
+    },
+    {
+      "source": "asyncio.wait()",
+      "relation": "사용한다",
+      "target": "asyncio.create_task()"
+    },
+    {
+      "source": "asyncio.wait()",
+      "relation": "구분하여 반환한다",
+      "target": "완료된 태스크"
+    },
+    {
+      "source": "asyncio.wait()",
+      "relation": "구분하여 반환한다",
+      "target": "대기 중인 태스크"
+    },
+    {
+      "source": "asyncio.wait()",
+      "relation": "매개변수로 지정할 수 있다",
+      "target": "asyncio.FIRST_COMPLETED"
+    },
+    {
+      "source": "asyncio.wait_for()",
+      "relation": "사용한다",
+      "target": "코루틴"
+    },
+    {
+      "source": "asyncio.wait_for()",
+      "relation": "설정할 수 있다",
+      "target": "타임아웃"
+    },
+    {
+      "source": "asyncio.wait_for()",
+      "relation": "발생한다",
+      "target": "asyncio.TimeoutError"
+    },
+    {
+      "source": "타임아웃 발생",
+      "relation": "취소된다",
+      "target": "해당 태스크"
+    }
+  ],
+  "entity_sources": {
+    "비동기 프로그래밍": [
+      "asyncio_basics.txt"
+    ],
+    "asyncio": [
+      "asyncio_basics.txt",
+      "asyncio_best_practices.txt"
+    ],
+    "코루틴": [
+      "asyncio_basics.txt"
+    ],
+    "이벤트 루프": [
+      "asyncio_basics.txt"
+    ],
+    "async def": [
+      "asyncio_basics.txt"
+    ],
+    "await": [
+      "asyncio_basics.txt"
+    ],
+    "asyncio.run()": [
+      "asyncio_basics.txt"
+    ],
+    "hello()": [
+      "asyncio_basics.txt"
+    ],
+    "main()": [
+      "asyncio_basics.txt"
+    ],
+    "asyncio.sleep()": [
+      "asyncio_basics.txt"
+    ],
+    "time.sleep": [
+      "asyncio_best_practices.txt"
+    ],
+    "asyncio.sleep": [
+      "asyncio_best_practices.txt"
+    ],
+    "asyncio.to_thread": [
+      "asyncio_best_practices.txt"
+    ],
+    "ProcessPoolExecutor": [
+      "asyncio_best_practices.txt"
+    ],
+    "asyncio.Semaphore": [
+      "asyncio_best_practices.txt"
+    ],
+    "fetch_data": [
+      "asyncio_best_practices.txt",
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.gather": [
+      "asyncio_best_practices.txt",
+      "asyncio_tasks.txt"
+    ],
+    "task1": [
+      "asyncio_best_practices.txt"
+    ],
+    "task2": [
+      "asyncio_best_practices.txt"
+    ],
+    "task3": [
+      "asyncio_best_practices.txt"
+    ],
+    "results": [
+      "asyncio_best_practices.txt",
+      "asyncio_tasks.txt"
+    ],
+    "Exception": [
+      "asyncio_best_practices.txt"
+    ],
+    "fetch_with_cleanup": [
+      "asyncio_best_practices.txt"
+    ],
+    "aiohttp": [
+      "asyncio_best_practices.txt"
+    ],
+    "aiofiles": [
+      "asyncio_best_practices.txt"
+    ],
+    "main": [
+      "asyncio_best_practices.txt",
+      "asyncio_tasks.txt"
+    ],
+    "PYTHONASYNCIODEBUG": [
+      "asyncio_best_practices.txt"
+    ],
+    "asyncio.create_task": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.wait": [
+      "asyncio_tasks.txt"
+    ],
+    "task": [
+      "asyncio_tasks.txt"
+    ],
+    "result": [
+      "asyncio_tasks.txt"
+    ],
+    "url": [
+      "asyncio_tasks.txt"
+    ],
+    "url1": [
+      "asyncio_tasks.txt"
+    ],
+    "url2": [
+      "asyncio_tasks.txt"
+    ],
+    "url3": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.wait()": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.create_task()": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.FIRST_COMPLETED": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.wait_for()": [
+      "asyncio_tasks.txt"
+    ],
+    "asyncio.TimeoutError": [
+      "asyncio_tasks.txt"
+    ],
+    "slow_operation()": [
+      "asyncio_tasks.txt"
+    ]
+  }
+}
